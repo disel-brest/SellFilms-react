@@ -1,0 +1,22 @@
+.container {
+	display: flex;
+	flex: 1 0 auto;
+	padding: 60px 30px 30px 30px;
+	@media (max-width: 992px) {
+		display: block;
+	}
+}
+
+.products-wrapper {
+	flex-grow: 1;
+	margin-left: 30px;
+	@media (max-width: 992px) {
+		margin: 0px 0px;
+	}
+}
+
+.products-title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}

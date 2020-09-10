@@ -1,0 +1,13 @@
+@import 'scss/variables.scss';
+
+.wrapper {
+	background-color: $colorWhite;
+	max-width: 1300px;
+	min-width: 200px;
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	// height: 100%;      при инспекции трабл
+}

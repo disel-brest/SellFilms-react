@@ -1,0 +1,39 @@
+@import 'scss/normalize.scss';
+@import 'scss/variables.scss';
+
+h1 {
+	font-size: 25px;
+	color: #fff;
+}
+
+body {
+	background-color: $colorBlue;
+	font-family: "Myriad Pro", Arial;
+	padding: 0px 15px;
+}
+
+.icon {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.btn-bg {
+	padding: 8px 15px;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+.btn-sm {
+	padding: 5px 10px;
+	font-size: 15px;
+	border-radius: 5px;
+}
+
+.input {
+	width: 100%;
+    display: block;
+    color: $colorGreyDark;
+    font-size: 14px;
+    border: 1px solid $colorGreyDark;
+}

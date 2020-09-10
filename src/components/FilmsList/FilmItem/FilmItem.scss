@@ -1,0 +1,75 @@
+@import '../../../scss/variables.scss';
+
+.product {
+	display: flex;
+	padding: 15px 10px 15px 15px;
+	background-color: #e0e0e4;
+	@media (max-width: 768px) {
+		flex-wrap: wrap;
+	}
+	&__foto {
+		height: 70px;
+		width: 50px;
+		margin-right: 20px;
+		@media (max-width: 480px) {
+			width: 100%;
+			height: auto;
+			margin: 0px 0px 15px 0px;
+		}
+	}
+	&__foto img {
+		height: auto;
+		max-width: 100%;
+		display: block;
+	}
+	&__descr {
+		@media (max-width: 480px) {
+			width: 100%;
+		}
+	}
+	&__title {
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: 7px;
+	}
+	&__property {
+		font-size: 12px;
+		color: $colorGreyDark;
+		margin-bottom: 5px;
+	}
+	&__property:last-child {
+		margin-bottom: 0px;
+	}
+	&__info {
+		margin-left: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+	}
+	&__price {
+		color: $colorBlueDark;
+		font-size: 18px;
+		font-weight: 700;
+		text-align: right;
+		@media (max-width: 768px) {
+			text-align: left;
+			margin: 20px 0px;
+		}
+	}
+	&__container {
+		display: flex;
+		flex-direction: row;
+	}
+	&__cart {
+		color: $colorGreen;
+		font-size: 13px;
+		cursor: pointer;
+	}
+	&__more {
+		font-size: 13px;
+		margin-left: 30px;
+	}
+}
