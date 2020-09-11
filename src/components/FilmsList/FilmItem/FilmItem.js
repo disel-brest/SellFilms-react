@@ -2,13 +2,16 @@ import React from 'react';
 import './FilmItem.scss';
 
 function FilmItem(props) {
+
+    const { film } = props;
+
     return (
         <article className="product">
             <div className="product__foto">
-                <img src={require(`../../../assets/images/${props.film.id}.jpg`)} alt=""/>
+                <img src={require(`../../../assets/images/${film.id}.jpg`)} alt=""/>
             </div>
             <div className="product__descr">
-                <div className="product__title">{props.film.name} (2017)</div>
+                <div className="product__title">{film.name} (2017)</div>
                 <div className="product__property">Жанр фильма: Боевик</div>
                 <div className="product__property">Страна производства: Зарубежный</div>
                 <div className="product__property">Рейтинг: 56 %</div>
