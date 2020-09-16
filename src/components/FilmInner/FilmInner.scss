@@ -1,0 +1,39 @@
+@import '../../scss/variables.scss';
+
+.inner-container {
+	padding: 30px 30px 60px 30px;
+}
+
+.inner-top {
+	padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+	height: 85px;
+	width: 100%;
+	background-color: #c6d3ee;
+	@media (max-width: 480px) {
+		flex-wrap: wrap;
+		justify-content: center;
+		height: auto;
+	}
+	&__price {
+		font-size: 25px;
+		color: $colorBlue;
+		display: flex;
+		align-items: center;
+		@media (max-width: 480px) {
+			margin-bottom: 10px;
+			width: 100%;
+			display: block;
+			text-align: center;
+		}	
+	}
+	& .btn-bg {
+		background-color: rgb(198, 211, 238);
+		color: $colorBlue;
+		border: 1px solid $colorBlue;
+		&:hover {
+			background-color: #fff;
+		}
+	}
+}

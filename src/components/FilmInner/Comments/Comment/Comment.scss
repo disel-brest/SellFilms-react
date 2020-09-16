@@ -1,0 +1,58 @@
+@import '../../../../scss/variables.scss';
+
+.inner-comments {
+	&__item {
+		display: flex;
+		padding-top: 15px;
+		padding-bottom: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-top: 1px solid $colorGrey;
+		@media (max-width: 480px) {
+			flex-wrap: wrap;
+		}
+	}
+	&__item.positive {
+		background-color: $positiveFeedback;
+	}
+	&__item.negative {
+		background-color: $negativeFeedback;
+	}
+	&__photo {
+		width: 100px;
+		height: 100px;
+		flex-shrink: 0;
+		margin-right: 20px;
+		@media (max-width: 480px) {
+			width: 100%;
+			height: auto;
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	&__photo img{
+		height: auto;
+		max-width: 100%;
+		display: block;
+		@media (max-width: 480px) {
+			width: 100%;
+		}
+	}
+	&__info {
+		@media (max-width: 480px) {
+			padding: 0px 10px 0px 10px;
+		}
+	}
+	&__name {
+		font-size: 16px;
+		font-weight: 700;
+	}
+	&__date {
+		font-size: 12px;
+		color: $colorGreyDark;
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+	&__content {
+		line-height: 1.3;
+	}
+}

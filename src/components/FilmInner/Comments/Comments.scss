@@ -1,0 +1,21 @@
+@import '../../../scss/variables.scss';
+
+.inner-comments {
+	&__title {
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+	& .btn-bg {
+		background-color: $colorBlue;
+		color: $colorWhite;
+		margin-top: 30px;
+		padding: 13px 20px;
+		@media (max-width: 480px) {
+			width: 100%;
+		}
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
