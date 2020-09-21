@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 
 function FilmItem(props) {
 
-    const { film } = props;
+    const { film, addToCart } = props;
+    const onClickHandler = () => addToCart(film);
 
     return (
         <article className="product">
@@ -21,7 +22,7 @@ function FilmItem(props) {
             <div className="product__info">
                 <div className="product__price">Цена: {film.cost} руб.</div>
                 <div className="product__container">
-                    <div className="product__cart">В корзину</div>
+                    <div className="product__cart" onClick={onClickHandler}>В корзину</div>
                     <Link className="product__more" to={`/films/${film.id}`}>Подробнее...</Link>
                 </div>
             </div>

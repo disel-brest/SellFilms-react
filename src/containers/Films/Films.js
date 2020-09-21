@@ -3,7 +3,7 @@ import './Films.scss';
 
 import FilmsList from '../../components/FilmsList';
 import { connect } from 'react-redux';
-import { fetchFilms } from '../../redux/actions';
+import { fetchFilms, addToCart } from '../../redux/actions';
 
 class Films extends Component {
 
@@ -18,13 +18,13 @@ class Films extends Component {
 
     render() {
 
-        const { list } = this.props;
+        const { list, addToCart } = this.props;
 
         return (
             <div className='container'>
                 <section className="products-wrapper">
                     <h2 className="products-title">Список фильмов</h2>
-                    <FilmsList films={list}/>
+                    <FilmsList films={list} addToCart={addToCart}/>
                 </section>
             </div>
         );
@@ -37,4 +37,4 @@ const mapStateToProps = (state)=>{         //глобальный state=store
     };
 }
 
-export default connect(mapStateToProps , { fetchFilms: fetchFilms })(Films);
+export default connect(mapStateToProps , { fetchFilms: fetchFilms, addToCart: addToCart })(Films);

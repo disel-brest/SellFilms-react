@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.scss';
 
-import Header from './components/Header';
-import Films from './pages/Films';
-import Cart from './pages/Cart';
-import Film from './pages/Film';
+import Header from './containers/Header';
+import Films from './containers/Films';
+import Cart from './containers/Cart';
+import Film from './containers/Film';
 
 import { Route, Switch } from 'react-router-dom';
 

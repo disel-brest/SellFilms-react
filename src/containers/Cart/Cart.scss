@@ -1,0 +1,23 @@
+@import '../../scss/variables.scss';
+
+.cart {
+	padding: 60px 30px 30px 30px;
+	&__top {
+		margin-bottom: 20px;
+	}
+	&__top h2 {
+		font-size: 24px;
+    	font-weight: 700;
+	}
+	// &__list {
+	// 	margin-bottom: 20px;
+	// }
+	// &__list .cart-product {
+	// 	margin-bottom: 10px;
+	// }
+	&__total {
+		color: $colorBlueDark;
+		font-size: 19px;
+		font-weight: 700;
+	}
+}
