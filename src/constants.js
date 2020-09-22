@@ -1,0 +1,4 @@
+export const SORT_BY_HIGHER_PRICE = 'SORT_BY_HIGHER_PRICE';
+export const SORT_BY_LESS_PRICE = 'SORT_BY_LESS_PRICE';
+export const SORT_BY_YEAR = 'SORT_BY_YEAR';
+export const SORT_BY_RATE = 'SORT_BY_RATE';

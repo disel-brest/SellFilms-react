@@ -44,3 +44,9 @@ export const decreaseCountCart = (film) => ({
   type: DECREASE_COUNT_CART,
   payload: film,
 });
+
+export const UPDATE_SORTING = 'UPDATE_SORTING';
+export const updateSorting = (type) => ({
+  type: UPDATE_SORTING,
+  payload: type,
+});

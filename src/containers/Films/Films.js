@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './Films.scss';
 
 import FilmsList from '../../components/FilmsList';
+import Sorting from '../../components/Sorting';
 import { connect } from 'react-redux';
-import { fetchFilms, addToCart } from '../../redux/actions';
+import { fetchFilms, addToCart, updateSorting } from '../../redux/actions';
 
 class Films extends Component {
 
@@ -18,12 +19,13 @@ class Films extends Component {
 
     render() {
 
-        const { list, addToCart } = this.props;
+        const { list, addToCart, sorting, updateSorting } = this.props;
 
         return (
             <div className='container'>
                 <section className="products-wrapper">
                     <h2 className="products-title">Список фильмов</h2>
+                    <Sorting sorting={sorting} updateSorting={updateSorting}/>
                     <FilmsList films={list} addToCart={addToCart}/>
                 </section>
             </div>
@@ -33,8 +35,13 @@ class Films extends Component {
 
 const mapStateToProps = (state)=>{         //глобальный state=store
     return {
-		list: state.films.initialList   //если несколько reducers
+        list: state.films.initialList,   //если несколько reducers
+        sorting: state.films.sorting
     };
 }
 
-export default connect(mapStateToProps , { fetchFilms: fetchFilms, addToCart: addToCart })(Films);
+export default connect(mapStateToProps ,{ 
+    fetchFilms: fetchFilms,
+    addToCart: addToCart,
+    updateSorting: updateSorting 
+})(Films);

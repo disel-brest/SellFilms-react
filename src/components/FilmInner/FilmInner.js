@@ -14,7 +14,7 @@ function FilmInner(props) {
         <>
             <div className="inner-container">
                 <div className="inner-top">
-                    <div className="inner-top__price">Цена: 500 руб</div>
+                    <div className="inner-top__price">Цена: {film.cost} руб</div>
                     <button className="btn-bg" onClick={addToCartHandler}>Добавить в корзину</button>
                 </div>
                 <FilmInfo film={film} />
