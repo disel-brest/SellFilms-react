@@ -3,7 +3,7 @@ import './Film.scss';
 
 import FilmInner from '../../components/FilmInner';
 import { connect } from 'react-redux';
-import { fetchFilm, addToCart } from '../../redux/actions';
+import { fetchFilm, addToCart, addComment } from '../../redux/actions';
 
 class Film extends Component {
 
@@ -26,9 +26,10 @@ class Film extends Component {
                 <FilmInner 
                     film={this.props.activeFilm}
                     addToCart={this.props.addToCart}
+                    addComment={this.props.addComment}
                 />
-                {/* FilmInner
-                    -FilmInfo
+                {/* FilmInner     расшифровка
+                    -FilmInfo     внутри будет
                     -Comments
                     -AddComment */}
             </>
@@ -42,4 +43,8 @@ const mapStateToProps = (state)=>{         //глобальный state=store
     };
 }
 
-export default connect(mapStateToProps , { fetchFilm: fetchFilm, addToCart: addToCart })(Film);
+export default connect(mapStateToProps, {
+    fetchFilm: fetchFilm,
+    addToCart: addToCart,
+    addComment: addComment
+})(Film);

@@ -10,3 +10,18 @@ const reducers = combineReducers({
 })
 
 export default reducers;
+
+/*
+state = {
+      films: {
+            initialList: [],
+            sorting: ''
+      },
+      activeFilm: null,
+      cart: {
+            list: [],
+            total: 0,
+      }
+}
+*/
+

@@ -50,3 +50,14 @@ export const updateSorting = (type) => ({
   type: UPDATE_SORTING,
   payload: type,
 });
+
+export const ADD_COMMENT = 'ADD_COMMENT';
+export const addComment = (status, content) => ({
+  type: ADD_COMMENT,
+  payload: { status, content },
+  // payload: {             //расшифровка
+  //   status: status,
+  //   text: text,
+  //   id: id
+  // }
+});
